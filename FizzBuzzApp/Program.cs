@@ -10,6 +10,11 @@ for (int i = 1; i <= 100; i++) {
     if (i % 5 == 0) {
        answer += "Buzz";
     }
+
+    if (i % 7 == 0)
+    {
+        answer += "Bang";
+    }
     
     if (string.IsNullOrEmpty(answer)){
         Console.WriteLine(i);
