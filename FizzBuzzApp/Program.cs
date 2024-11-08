@@ -4,7 +4,7 @@ for (int i = 1; i <= 100; i++) {
     string answer = "";
     
     if (i % 3 == 0) { 
-        answer = "Fizz";
+        answer += "Fizz";
     } 
     
     if (i % 5 == 0) {
@@ -15,10 +15,8 @@ for (int i = 1; i <= 100; i++) {
     {
         answer += "Bang";
     }
+
+    answer = string.IsNullOrEmpty(answer) ? i.ToString() : answer;
     
-    if (string.IsNullOrEmpty(answer)){
-        Console.WriteLine(i);
-    } else {
-        Console.WriteLine(answer);
-    }
+   Console.WriteLine(answer);
 }
